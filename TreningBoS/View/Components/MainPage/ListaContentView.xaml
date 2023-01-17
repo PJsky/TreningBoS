@@ -19,20 +19,18 @@
             Text="Generuj"
             VerticalOptions="Center"
             WidthRequest="200" />
-        <VerticalStackLayout>
-            <ListView ItemsSource="{Binding Elements}" MinimumWidthRequest="120">
-                <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="model:ElementModel">
-                        <ViewCell>
-                            <VerticalStackLayout Padding="5">
-                                <Label Text="{Binding ElementName, StringFormat='Element name: {0}'}" TextColor="Green" />
-                                <Label Text="{Binding Description, StringFormat='Description: {0}'}" TextColor="Red" />
-                            </VerticalStackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </VerticalStackLayout>
+        <ListView ItemsSource="{Binding Elements}" MinimumWidthRequest="120">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="model:ElementModel">
+                    <ViewCell>
+                        <VerticalStackLayout Padding="5">
+                            <Label Text="{Binding ElementName, StringFormat='Element name: {0}'}" TextColor="Green" />
+                            <Label Text="{Binding Description, StringFormat='Description: {0}'}" TextColor="Red" />
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </HorizontalStackLayout>
 
 </ContentView>
